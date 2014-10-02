@@ -909,7 +909,7 @@ class Selection extends Nette\Object implements \Iterator, IRowContainer, \Array
 	public function offsetSet($key, $value)
 	{
 		$this->execute();
-		$this->rows[$key] = $value;
+		$this->data[$key] = $value;
 	}
 
 
@@ -921,7 +921,7 @@ class Selection extends Nette\Object implements \Iterator, IRowContainer, \Array
 	public function offsetGet($key)
 	{
 		$this->execute();
-		return $this->rows[$key];
+		return $this->data[$key];
 	}
 
 
@@ -933,7 +933,7 @@ class Selection extends Nette\Object implements \Iterator, IRowContainer, \Array
 	public function offsetExists($key)
 	{
 		$this->execute();
-		return isset($this->rows[$key]);
+		return isset($this->data[$key]);
 	}
 
 
